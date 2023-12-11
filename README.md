@@ -6,7 +6,7 @@
 
 **That minecraft_background.mp4 had to be shorten down due to GitHub's limit file size of 25MB.**
 
-**[For the offical background, Please click on this link](https://drive.google.com/file/d/1UNTht1VRyUvHAi8I9dFlcUNS9AlVIlIl/view?usp=sharing)**
+**[For the offical background, please click on this link](https://drive.google.com/file/d/1UNTht1VRyUvHAi8I9dFlcUNS9AlVIlIl/view?usp=sharing)**
 
 
 # Package Installation
