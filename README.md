@@ -15,6 +15,9 @@
 
 ## To see examples of this system
 
+<video src="https://github.com/HussBTWYT/JokeAPI-Video-Creator/blob/main/Example%20Output/output_video.mp4" width=360/>
+
+
 If you would like to see some examples [*again please note that these are in beta and have a* **variety of problems** *so please submit a pull request to contribute to this project to fix errors*] go to the repository, and go inside > Example Videos > *variety of example videos*
 
 **May I repeat, please submit a pull request to contribute to this project to fix errors as there are a variety of them, which I could not fix by myself.**
