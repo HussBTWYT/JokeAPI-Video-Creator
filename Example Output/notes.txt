@@ -1,1 +1,1 @@
-
+This text file is inside the directory Example Output.
