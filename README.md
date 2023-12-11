@@ -71,25 +71,12 @@ Then, check the directory of **"Outputted Videos"** and you should see your vide
 
 *Note that outputted videos file's name go in order, e.g. output_video.mp4, then output_video1.mp4, then output_video2.mp4 (if output_video.mp4 already exists, this order occurs)*
 
-## API Usage 
+## Contributing
 
-### Before I continue, this is only for the actual API, and does not resemble the Video-Creator code.
+We **welcome contributions from the community!** Whether it's *improving documentation*, *adding new features*, or **fixing bugs**, your input is **highly appreciated**. 
 
-This is an API hosted on [Flask](https://flask.palletsprojects.com/en/1.1.x/) app that serves a JSON response according to the [randomly generated] joke.
+This project isn't currently licensed under the MIT License, however we do allow the same consent to the MIT Licence, so you're free to use, modify, and distribute it as you see fit. Stay in the Loop coders!
 
-Note that there are multiple use cases of programming languages that can be used here, and is up to you however PYTHON WILL BE THE MAIN, that is why there is a requirements.txt for python only.
+Don't forget to star this repository to stay updated on the latest enhancements and features. Follow us on Twitter for the latest news and updates.
 
-To use this API, run the following example script using the requests libary and json libary:
-
-```python
-import requests, json
-
-url = "https://hussbtwjokesapi.pythonanywhere.com/api/randomjoke"
-params = "joke"
-
-response = requests.get(url, params)
-
-data = json.loads(response.text)
-
-print(data["joke"])
-```
+Happy coding and enjoy your journey with JokeAPI-Video-Creator 💡🚀
