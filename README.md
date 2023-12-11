@@ -1,4 +1,6 @@
-## Problem
+**[![Python](https://img.shields.io/badge/Python-Flask-blue)](https://www.python.org/)**
+
+## Quick Problem Notice
 
 **There is a major problem I would like to address with this repository,**
 
@@ -6,7 +8,6 @@
 
 **[For the offical background, Please click on this link](www.example.com)**
 
-**[![Python](https://img.shields.io/badge/Python-Flask-blue)](https://www.python.org/)**
 
 # Package Installation
 
