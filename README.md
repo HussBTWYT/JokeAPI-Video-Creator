@@ -48,12 +48,14 @@ cd Python Video Creator
 Once doing all of these, open **main.py** and change the following lines to your own paths:
 
 ```bash
-LINE 1: background_video_path = r"your/path/to/minecraft_background.mp4"
+background_video_path = r"your/path/to/minecraft_background.mp4"
 ```
 
 
+
+
 ```bash
-LINE 2: output_video_directory = r"your/path/to/Outputted Videos"
+output_video_directory = r"your/path/to/Outputted Videos"
 ```
 
 
