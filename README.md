@@ -28,7 +28,9 @@ Then, check the directory of **"Outputted Videos"** and you should see your vide
 
 *Note that outputted videos file's name go in order, e.g. output_video.mp4, then output_video1.mp4, then output_video2.mp4 (if output_video.mp4 already exists, this order occurs)*
 
-# API Usage (ONLY FOR API, NOT VIDEO CREATOR)
+# API Usage 
+
+## Before I continue, this is only for the actual API, and does not resemble the Video-Creator code.
 
 This is an API hosted on [Flask](https://flask.palletsprojects.com/en/1.1.x/) app that serves a JSON response according to the [randomly generated] joke.
 
