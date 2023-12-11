@@ -26,6 +26,12 @@ git clone https://github.com/HussBTWYT/JokeAPI-Video-Creator
 
 Secondly, Install the Python requirements using `pip install -r requirements.txt`
 
+After that, go inside the **Python Video Creator** using the following:
+
+```bash
+cd Python Video Creator
+```
+
 Then, open command prompt and write the following command:
 
 ```bash
