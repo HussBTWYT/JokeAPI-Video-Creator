@@ -9,23 +9,23 @@
 **[For the offical background, please click on this link](https://drive.google.com/file/d/1UNTht1VRyUvHAi8I9dFlcUNS9AlVIlIl/view?usp=sharing)**
 
 
-# Package Installation
+## Package Installation
 
 - Install Python requirements `pip install -r requirements.txt`
 
-# To see examples of this system
+## To see examples of this system
 
 If you would like to see some examples [*again please note that these are in beta and have a* **variety of problems** *so please submit a pull request to contribute to this project to fix errors*] go to the repository, and go inside > Example Videos > *variety of example videos*
 
 **May I repeat, please submit a pull request to contribute to this project to fix errors as there are a variety of them, which I could not fix by myself.**
 
-# Functionality of the Video Creator
+## Functionality of the Video Creator
 
 The video creator uses my API [JokeAPI](github.com/HussBTW/YT/JokeAPI) to create something that resembles a TikTok video, given 3 jokes in the video.
 
 **NOTE: THERE IS SITLL A HUGE VARIETY OF PROBLEMS WITH THIS, AS IN A HIGH BETA VERSION.**
 
-# How To Use
+## How To Use
 
 Firstly, clone the repository by the following command: 
 
@@ -51,9 +51,9 @@ Then, check the directory of **"Outputted Videos"** and you should see your vide
 
 *Note that outputted videos file's name go in order, e.g. output_video.mp4, then output_video1.mp4, then output_video2.mp4 (if output_video.mp4 already exists, this order occurs)*
 
-# API Usage 
+## API Usage 
 
-## Before I continue, this is only for the actual API, and does not resemble the Video-Creator code.
+### Before I continue, this is only for the actual API, and does not resemble the Video-Creator code.
 
 This is an API hosted on [Flask](https://flask.palletsprojects.com/en/1.1.x/) app that serves a JSON response according to the [randomly generated] joke.
 
