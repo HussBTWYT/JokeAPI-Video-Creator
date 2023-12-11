@@ -13,9 +13,7 @@
 
 - Install Python requirements `pip install -r requirements.txt`
 
-## To see examples of this system
-
-<video src="https://github.com/HussBTWYT/JokeAPI-Video-Creator/blob/main/Example%20Output/output_video.mp4" width=360/>
+## To see examples of the system 
 
 
 If you would like to see some examples [*again please note that these are in beta and have a* **variety of problems** *so please submit a pull request to contribute to this project to fix errors*] go to the repository, and go inside > Example Videos > *variety of example videos*
