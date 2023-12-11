@@ -1,4 +1,12 @@
-[![Python](https://img.shields.io/badge/Python-Flask-blue)](https://www.python.org/)
+## Problem
+
+**There is a major problem I would like to address with this repository,**
+
+**That minecraft_background.mp4 had to be shorten down due to GitHub's limit file size of 25MB.**
+
+**[For the offical background, Please click on this link](www.example.com)**
+
+**[![Python](https://img.shields.io/badge/Python-Flask-blue)](https://www.python.org/)**
 
 # Package Installation
 
