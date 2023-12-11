@@ -1,4 +1,4 @@
-[![Python]](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-Flask-blue)](https://www.python.org/)
 
 # Package Installation
 
