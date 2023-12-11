@@ -148,8 +148,8 @@ if __name__ == "__main__":
     text_durations = [(f"{jokes[1]}", 0, 5), (f"{jokes[2]}", 5, 8), (f"{jokes[3]}", 13, 6)]
 
     # Set the paths for the background video and output directory
-    background_video_path = r"C:\Users\hussa\OneDrive\Desktop\Python Video Creator\minecraft_background.mp4"
-    output_video_directory = r"C:\Users\hussa\OneDrive\Desktop\Python Video Creator\Outputted Videos"
+    background_video_path = r"your/path/to/minecraft_background.mp4"
+    output_video_directory = r"your/path/to/Outputted Videos"
 
     # Create the video with the specified parameters
     create_video(output_video_directory, background_video_path, text_durations)
