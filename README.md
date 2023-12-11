@@ -33,7 +33,11 @@ Firstly, clone the repository by the following command:
 git clone https://github.com/HussBTWYT/JokeAPI-Video-Creator
 ```
 
-Secondly, Install the Python requirements using `pip install -r requirements.txt`
+Secondly, Install the Python requirements using `pip install -r requirements.txt`, and to access this enter the command to enter the repository:
+
+```bash
+cd JokeAPI-Video-Creator
+```
 
 After that, go inside the **Python Video Creator** using the following:
 
