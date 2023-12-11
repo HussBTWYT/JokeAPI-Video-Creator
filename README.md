@@ -76,7 +76,7 @@ Then, check the directory of **"Outputted Videos"** and you should see your vide
 
 We **welcome contributions from the community!** Whether it's *improving documentation*, *adding new features*, or **fixing bugs**, your input is **highly appreciated**. 
 
-This project isn't currently licensed, so for clarification, this is techinay an open source project, however legal notices will be put in place if code has been taken to use for selling software.
+This project isn't currently licensed, so for clarification, this is technically an open source project, however legal notices will be put in place if code has been taken to use for selling software.
 
 Don't forget to star this repository to stay updated on the latest enhancements and features. Follow us on Twitter for the latest news and updates.
 
