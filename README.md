@@ -21,7 +21,11 @@ https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/3b8fa874-f69
 
 **Here is another quick example:**
 
-https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/b2fbf804-59b5-44f7-a864-d8a7b8cf1b0
+
+
+https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/9e731700-a826-414f-b785-e22dbcbfd36b
+
+
 
 **I would also like to clarify that we highly encourage you, and actually we really want you to contribute to our project, fix errors [as it is still in beta], and find any little bugs and try to fix them yourself! Anything that fixes something major we will add as a feature! As I couldn't do this myself**
 
