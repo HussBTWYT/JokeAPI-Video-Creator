@@ -21,6 +21,8 @@
 
 https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/3b8fa874-f692-4dca-9eeb-e6d86ff5c012
 
+**Here is another quick example:**
+
 
 
 However,
@@ -59,14 +61,14 @@ cd Python Video Creator
 Once doing all of these, open **main.py** and change the following lines to your own paths:
 
 ```bash
-background_video_path = r"your/path/to/minecraft_background.mp4"
+background_video_path = r"your\path\to\minecraft_background.mp4"
 ```
 
 
 
 
 ```bash
-output_video_directory = r"your/path/to/Outputted Videos"
+output_video_directory = r"your\path\to\folder\Outputted Videos"
 ```
 
 
