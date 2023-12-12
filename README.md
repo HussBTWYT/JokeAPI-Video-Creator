@@ -13,11 +13,9 @@
 
 - Install Python requirements `pip install -r requirements.txt`
 
-## To see examples of the system 
+## Examples
 
 [Please turn up the volume on your system device] This is a quick example:
-
-
 
 https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/3b8fa874-f692-4dca-9eeb-e6d86ff5c012
 
@@ -25,12 +23,7 @@ https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/3b8fa874-f69
 
 https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/b2fbf804-59b5-44f7-a864-d8a7b8cf1b0
 
-However,
-
-
-If you would like to see some examples [*again please note that these are in beta and have a* **variety of problems** *so please submit a pull request to contribute to this project to fix errors*] go to the repository, and go inside > Example Videos > *variety of example videos*
-
-**May I repeat, please submit a pull request to contribute to this project to fix errors as there are a variety of them, which I could not fix by myself.**
+**I would also like to clarify that we highly encourage you, and actually we really want you to contribute to our project, fix errors [as it is still in beta], and find any little bugs and try to fix them yourself! Anything that fixes something major we will add as a feature! As I couldn't do this myself**
 
 ## Functionality of the Video Creator
 
