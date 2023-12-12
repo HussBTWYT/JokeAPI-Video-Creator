@@ -15,6 +15,12 @@
 
 ## To see examples of the system 
 
+This is a quick example:
+
+https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/aed2e4fe-2acd-4dbc-bb7b-28c9f1320afe
+
+However,
+
 
 If you would like to see some examples [*again please note that these are in beta and have a* **variety of problems** *so please submit a pull request to contribute to this project to fix errors*] go to the repository, and go inside > Example Videos > *variety of example videos*
 
