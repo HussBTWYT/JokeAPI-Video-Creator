@@ -23,7 +23,7 @@ https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/3b8fa874-f69
 
 **Here is another quick example:**
 
-
+https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/b2fbf804-59b5-44f7-a864-d8a7b8cf1b0
 
 However,
 
