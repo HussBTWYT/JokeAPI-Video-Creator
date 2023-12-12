@@ -3,12 +3,12 @@ import random
 from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip, concatenate_audioclips, AudioFileClip
 import requests
 import json
-import re
 import pyttsx3
 
 # API connection for jokes part
 jokes = {}
 
+# Get three jokes from the API
 for i in range(3):
     url = "https://hussbtwjokesapi.pythonanywhere.com/api/randomjoke"
     params = "joke"
@@ -31,7 +31,7 @@ def save_jokes_to_txt(jokes, output_path):
         for joke_number, joke_text in jokes.items():
             file.write(f"Joke {int(joke_number)}: {joke_text}\n")
 
-def create_video(output_path, background_path, text_durations):
+def create_video_smooth_subtitles(output_path, background_path, text_durations):
     try:
         # Load the background video
         background_clip = VideoFileClip(background_path)
@@ -51,73 +51,53 @@ def create_video(output_path, background_path, text_durations):
         # List to store TextClips
         text_clips = []
 
-        # List to store AudioClips
-        audio_clips = []
+        # List to store AudioClips for smooth subtitles
+        smooth_audio_clips = []
 
         # A variable to keep track of the current time in the video
         current_time = 0
 
         # A constant to define the initial delay between each line of the joke
-        initial_delay = 0.25
+        initial_delay = 0.80
 
         # Define the gap duration between lines
-        line_gap = 2.00
+        line_gap = 0.5
 
         # Loop through each text duration tuple
-        for text, _, duration in text_durations:
-            # Split the text by punctuation marks followed by a space
-            lines = re.split(r"[.?!]\s", text)
+        for text, start_time, duration in text_durations:
+            # Save part audio to file
+            part_audio_file = f"part_{int(start_time)}.wav"
+            save_audio(text, part_audio_file)
 
-            # Create a text clip with the joke number and the start time
-            joke_number = f"Joke {int(current_time // 5) + 1}:"
-            joke_number_audio_file = f"joke_number_{int(current_time // 5) + 1}.wav"
-            save_audio(joke_number, joke_number_audio_file)
-            joke_number_audio_clip = AudioFileClip(joke_number_audio_file).set_start(current_time + initial_delay)
+            # Load part audio clip
+            part_audio_clip = AudioFileClip(part_audio_file).set_start(start_time)
 
-            # Append the joke number audio clip to the list
-            audio_clips.append(joke_number_audio_clip)
+            # Append the part audio clip to the list
+            smooth_audio_clips.append(part_audio_clip)
 
-            # Loop through each line and its duration
-            for line in lines:
-                # Create a text clip with the line and a smaller fontsize
-                txt_clip = TextClip(line, fontsize=20, color='white')
+            # Create a TextClip for each joke
+            txt_clip_part = TextClip(text, fontsize=20, color='white')
 
-                # Calculate the delay dynamically based on the duration of the previous audio clip and the gap
-                delay = max(initial_delay, joke_number_audio_clip.duration * 0.1) + line_gap
+            # Calculate the delay dynamically based on the duration of the previous audio clip and the gap
+            delay = current_time + initial_delay
 
-                # Set the position to center, start time, and duration
-                txt_clip = txt_clip.set_pos('center').set_start(current_time + delay).set_duration(duration)
+            # Set the position to center, start time, and duration
+            txt_clip_part = txt_clip_part.set_pos('center').set_start(delay).set_duration(duration)
 
-                # Append the text clip to the list
-                text_clips.append(txt_clip)
+            # Append the text clip to the list
+            text_clips.append(txt_clip_part)
 
-                # Save line audio to file
-                line_audio_file = f"line_{int(current_time + delay)}.wav"
-                save_audio(line, line_audio_file)
+            # Update the current time by adding the duration of the part audio clip and the gap
+            current_time += part_audio_clip.duration + line_gap
 
-                # Load line audio clip
-                line_audio_clip = AudioFileClip(line_audio_file).set_start(current_time + delay)
-
-                # Append the line audio clip to the list
-                audio_clips.append(line_audio_clip)
-
-                # Update the current time by adding the duration of the line audio clip
-                current_time += line_audio_clip.duration
-
-            # Add a gap before the next joke
-            current_time += line_gap
-
-        # Reset current_time to 0 for the next joke
-        current_time = 0
+        # Concatenate the audio clips for smooth subtitles
+        smooth_final_audio = concatenate_audioclips(smooth_audio_clips)
 
         # Overlay the text clips on the background subclip
         final_clip = CompositeVideoClip([background_subclip] + text_clips)
 
-        # Concatenate the audio clips
-        final_audio = concatenate_audioclips(audio_clips)
-
-        # Set the audio of the final clip to the concatenated audio
-        final_clip = final_clip.set_audio(final_audio)
+        # Set the audio of the final clip to the concatenated audio for smooth subtitles
+        final_clip = final_clip.set_audio(smooth_final_audio)
 
         # Write the result to a file
         output_file_name = "output_video.mp4"
@@ -140,17 +120,20 @@ def create_video(output_path, background_path, text_durations):
     finally:
         # Clean up audio files
         for file in os.listdir():
-            if file.endswith(".wav"):
+            if file.startswith("part_") and file.endswith(".wav"):
                 os.remove(file)
 
 if __name__ == "__main__":
-    # Define a list of text, start time, and duration tuples
-    text_durations = [(f"{jokes[1]}", 0, 5), (f"{jokes[2]}", 5, 8), (f"{jokes[3]}", 13, 6)]
+    # For instance, the order goes "TEXT" {the joke}, START TIME OF "TEXT" {assume text is the joke by API} and the last element an integer is the duration
+    text_durations = [
+        (f"{jokes[1]}", 0, 7),
+        (f"{jokes[2]}", 4, 5),
+        (f"{jokes[3]}", 8, 6)
+    ]
 
     # Set the paths for the background video and output directory
-    background_video_path = r"your/path/to/minecraft_background.mp4"
-    output_video_directory = r"your/path/to/Outputted Videos"
+    background_video_path = r"your\path\to\minecraft_background.mp4"
+    output_video_directory = r"your\path\to\folder\Outputted Videos"
 
-    # Create the video with the specified parameters
-    create_video(output_video_directory, background_video_path, text_durations)
-
+    # Create the video with smooth subtitles
+    create_video_smooth_subtitles(output_video_directory, background_video_path, text_durations)
