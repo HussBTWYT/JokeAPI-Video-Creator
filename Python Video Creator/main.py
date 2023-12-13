@@ -70,7 +70,11 @@ def create_video_smooth_subtitles(output_path, background_path, text_durations):
             save_audio(text, part_audio_file)
 
             # Load part audio clip
-            part_audio_clip = AudioFileClip(part_audio_file).set_start(start_time)
+            part_audio_clip = AudioFileClip(part_audio_file)
+
+            # Update the last element of the tuple to the adjusted duration
+            adjusted_duration = part_audio_clip.duration - 0.75
+            text_durations[text_durations.index((text, start_time, duration))] = (text, start_time, adjusted_duration)
 
             # Append the part audio clip to the list
             smooth_audio_clips.append(part_audio_clip)
@@ -81,14 +85,18 @@ def create_video_smooth_subtitles(output_path, background_path, text_durations):
             # Calculate the delay dynamically based on the duration of the previous audio clip and the gap
             delay = current_time + initial_delay
 
+            # Adjust the delay by subtracting 1.75 for synchronization
+            adjusted_delay = delay - 1.75
+
             # Set the position to center, start time, and duration
-            txt_clip_part = txt_clip_part.set_pos('center').set_start(delay).set_duration(duration)
+            txt_clip_part = txt_clip_part.set_pos('center').set_start(adjusted_delay).set_duration(adjusted_duration)
 
             # Append the text clip to the list
             text_clips.append(txt_clip_part)
 
             # Update the current time by adding the duration of the part audio clip and the gap
-            current_time += part_audio_clip.duration + line_gap
+            current_time += adjusted_duration + line_gap
+
 
         # Concatenate the audio clips for smooth subtitles
         smooth_final_audio = concatenate_audioclips(smooth_audio_clips)
@@ -124,7 +132,7 @@ def create_video_smooth_subtitles(output_path, background_path, text_durations):
                 os.remove(file)
 
 if __name__ == "__main__":
-    # For instance, the order goes "TEXT" {the joke}, START TIME OF "TEXT" {assume text is the joke by API} and the last element an integer is the duration
+    # Use the three jokes for text durations
     text_durations = [
         (f"{jokes[1]}", 0, 7),
         (f"{jokes[2]}", 4, 5),
@@ -133,7 +141,7 @@ if __name__ == "__main__":
 
     # Set the paths for the background video and output directory
     background_video_path = r"your\path\to\minecraft_background.mp4"
-    output_video_directory = r"your\path\to\folder\Outputted Videos"
+    output_video_directory = r"your\path\to\Outputted Videos"
 
     # Create the video with smooth subtitles
     create_video_smooth_subtitles(output_video_directory, background_video_path, text_durations)
