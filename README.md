@@ -17,7 +17,9 @@
 
 [Please turn up the volume on your system device] This is a quick example:
 
-https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/3b8fa874-f692-4dca-9eeb-e6d86ff5c012
+
+https://github.com/HussBTWYT/JokeAPI-Video-Creator/assets/121028340/47f0c9a6-994b-4a58-b01a-ee83633a9960
+
 
 **Here is another quick example:**
 
