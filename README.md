@@ -1,6 +1,6 @@
-A TikTok-Inspired Python Tool to create jokes for a video.
-
 **[![Python](https://img.shields.io/badge/Python-Flask-blue)](https://www.python.org/)**
+
+**A TikTok-Inspired Python Tool to create jokes for a video.**
 
 ## Quick Problem Notice
 
