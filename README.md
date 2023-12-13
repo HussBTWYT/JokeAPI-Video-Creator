@@ -37,7 +37,7 @@ The video creator uses my API [JokeAPI](github.com/HussBTW/YT/JokeAPI) to create
 
 **NOTE: THERE IS SITLL A HUGE VARIETY OF PROBLEMS WITH THIS, AS IN A HIGH BETA VERSION.**
 
-## How To Use
+## How To Use [Windows]
 
 Firstly, clone the repository by the following command: 
 
